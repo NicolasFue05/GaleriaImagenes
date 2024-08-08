@@ -9,23 +9,78 @@
 <body>
     <header>
         <h1>Galeria de Imagenes</h1>
-        
     </header>
 
-    <div class="add-remove">
-        <h3>Añadir imagen</h3>
-        <label for="image-url">URL de la Imagen</label>
-        <input type="text" id="image-url" name="image-url">
-        <label for=""></label>
+    <div class="links">
+        <div class="add-image-link">
+            <button href="#">Añadir Imagen</button>
+        </div>
+        <div class="edit-image-link">
+            <button href="#">Editar Imagen</button>
+        </div>
+        <div class="remove-image-link">
+            <button href="#">Eliminar Imagen</button>
+        </div>
+    </div>
+    
+
+    <div class="add-edit-remove-container">
+
+        <div id="add-image">
+            <h3>Añadir imagen</h3><br>
+            <label for="image-url">URL de la Imagen</label><br><br>
+            <input type="text" id="image-url" name="image-url"><br><br>
+            <label for="image-tite">Titulo de la Imagen</label><br><br>
+            <input type="text" id="image-title" name="image-url"><br><br>
+            <div class="add-image-buttons">
+                <button type="submit"  class="send-btn"  id="add-image-btn">Agregar</button>
+                <button type="submit"  class="send-btn"  id="add-close-image-btn">Cerrar</button>
+            </div>
+        </div>
+    
+        <div id="edit-image">
+            <h3>Editar Imagen</h3><br>
+            <label for="remove-image-title">Ingresa el Titulo de la Imagen</label><br><br>
+            <input type="text" id="edit-image-title" name="remove-image-title"><br><br>
+            <button type="submit" class="send-btn" id="search-image-btn">Buscar Imagen</button><br><br>
+            <button class="send-btn" id="edit-close-image-btn">Cerrar</button>
+        </div>
+    
+        <div id="remove-image">
+            <h3>Eliminar Imagen</h3><br>
+            <label for="edit-image-title">Ingresa el Titulo de la Imagen</label><br><br>
+            <input type="text" id="remove-image-title" name="image-title"><br><br>
+            <button type="submit" class="send-btn" id="remove-image-btn">Eliminar Imagen</button><br><br>
+            <button type="submit" class="send-btn" id="remove-close-image-btn">Cerrar</button>
+        </div>
     </div>
 
 
     <div class="galery">
-        
+
+        <div class="loader-container">
+            <div class="loader"></div>
+        </div>
+
+        <div id="image1">
+            <img src="https://m.media-amazon.com/images/I/71aNoFWXxLL._AC_UF894,1000_QL80_.jpg" alt="Vampire Hunter D">
+            <h3>Vampire Hunter D</h3>
+            <div id="image1-buttons">
+                <button id="image1-eliminatebtn">Eliminar</button>
+                <button id="image1-detailsbtn">Detalles</button>
+            </div>
+        </div>
+
+        <div id="image1">
+            <img src="https://m.media-amazon.com/images/I/71aNoFWXxLL._AC_UF894,1000_QL80_.jpg" alt="Vampire Hunter D">
+            <h3>Vampire Hunter D</h3>
+            <div id="image1-buttons">
+                <button id="image1-eliminatebtn">Eliminar</button>
+                <button id="image1-detailsbtn">Detalles</button>
+            </div>
+        </div>
+
     </div>
-
-
-
 
     <script src="script.js"></script>
 </body>
