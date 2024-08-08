@@ -4,12 +4,12 @@
     box-sizing: border-box;
 }
 
-body{
+body {
     height: 100vh;
     font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-header{
+header {
     margin-top: 60px;
     width: 100%;
     display: flex;
@@ -18,161 +18,151 @@ header{
     flex-direction: column;
 }
 
-
-.links{
+.links {
     display: flex;
     width: 70%;
     padding: 20px;
     margin-top: 40px;
+    justify-content: space-around;
 }
 
-.links .add-image-link button,
-.links .edit-image-link button,
-.links .remove-image-link button{
+.links button {
     text-decoration: none;
     border: none;
     background-color: white;
-    color: rgb(0,0,0);
+    color: rgb(0, 0, 0);
     font-weight: bold;
     font-size: 1.3rem;
     cursor: pointer;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
 }
 
-.links .add-image-link button:hover,
-.links .edit-image-link button:hover,
-.links .remove-image-link button:hover{
-    opacity: 0.6;
-    text-shadow: 0px 0px 9px rgba(0,0,0,0.4);
+.links button:hover {
+    background-color: #ddd;
 }
 
-.add-edit-remove-container{
+.add-edit-remove-container {
     width: 70%;
     display: flex;
-}
-
-
-#add-image h3,
-#edit-image h3,
-#remove-image h3{
-    text-align: center;
-}
-
-#add-image{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 33%;
-    height: 300px;
-}
-
-#edit-image{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 33%;
-    height: 300px;
-}
-
-#remove-image{
-    display: none;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    margin-top: 10px;
-    width: 33%;
-    height: 300px;
-}
-
-.send-btn{
-    padding: 10px;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-}
-
-.send-btn:hover{
-    background-color: #1f1f1fa3;
-    color: white;
-}
-
-.galery{
-    margin-top: 30px;
-    display: grid;
-    grid-template-rows: repeat(100,1fr);
-    grid-template-columns: repeat(4, 1fr);
-    background-color: rgba(0, 0, 0, 0.839);
-    width: 70%;
-    height: 100vh;
-    border-radius: 20px;
-}
-
-#image1-buttons{
+    justify-content: space-around;
     margin-top: 20px;
 }
 
-#image1-eliminatebtn{
-    padding: 10px;
+.add-edit-remove-container > div {
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    width: 30%;
+    height: 300px;
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.send-btn {
+    padding: 10px 20px;
     border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.send-btn:hover {
+    background-color: #ddd;
+}
+
+.gallery {
+    margin-top: 30px;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+    gap: 20px;
+    background-color: rgba(0, 0, 0, 0.839);
+    width: 70%;
+    padding: 20px;
+    border-radius: 20px;
+}
+
+.image-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.image-container:hover {
+    transform: scale(1.05);
+}
+
+.image {
+    width: 100%;
+    border-radius: 10px;
+}
+
+.title {
+    margin-top: 10px;
+    text-align: center;
+    color: black;
+}
+
+#image-buttons {
+    margin-top: 10px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.eliminatebtn,
+.detailsbtn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.eliminatebtn {
     background-color: red;
     color: white;
-    border-radius: 10px;
-    font-weight: bold;
-    cursor: pointer;
 }
 
-#image1-detailsbtn{
-    padding: 10px;
-    border-radius: 10px;
-    font-weight: bold;
-    border: none;
-    cursor: pointer;
+.eliminatebtn:hover {
+    background-color: darkred;
 }
 
+.detailsbtn {
+    background-color: blue;
+    color: white;
+}
 
-#image1 {
-    margin-top: 30px;
-    width: 17rem;
-    height: 350px;
-    display: flex;
+.detailsbtn:hover {
+    background-color: darkblue;
+}
+
+.loader-container {
+    display: none;
     justify-content: center;
-    flex-direction: column;
     align-items: center;
 }
 
-#image1 img{
-    width: 75%;
-    border-radius: 10px;
-}
-
-#image1 h3{
-    margin-top: 15px;
-    text-align: center;
-    color: rgba(255, 252, 252, 0.844);
-}
-
-.loader-container{
-    display: none;
-    flex-direction: column;
-    justify-content: center;
-}
-
-/* Estilos para el contenedor del spinner */
 .loader {
-    border: 16px solid #f3f3f3; /* Color de fondo del spinner */
-    border-top: 16px solid red; /* Color del borde superior del spinner */
-    border-radius: 50%; /* Hace que el div sea redondo */
-    width: 50px; /* Ancho del spinner */
-    height: 50px; /* Altura del spinner */
-    animation: spin 2s ease-in-out infinite; /* Aplica la animación de giro */
-  }
-  
-  /* Animación de giro */
-  @keyframes spin {
+    border: 16px solid #f3f3f3;
+    border-top: 16px solid red;
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+    animation: spin 2s linear infinite;
+}
+
+@keyframes spin {
     0% { transform: rotate(0deg); }
     100% { transform: rotate(360deg); }
-  }
-  
+}
