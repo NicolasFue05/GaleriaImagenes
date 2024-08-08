@@ -6,10 +6,10 @@
 
 body{
     height: 100vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 header{
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
     margin-top: 60px;
     width: 100%;
     display: flex;
@@ -18,15 +18,161 @@ header{
     flex-direction: column;
 }
 
-.galery{
-    margin-top: 100px;
+
+.links{
     display: flex;
+    width: 70%;
+    padding: 20px;
+    margin-top: 40px;
+}
+
+.links .add-image-link button,
+.links .edit-image-link button,
+.links .remove-image-link button{
+    text-decoration: none;
+    border: none;
+    background-color: white;
+    color: rgb(0,0,0);
+    font-weight: bold;
+    font-size: 1.3rem;
+    cursor: pointer;
+}
+
+.links .add-image-link button:hover,
+.links .edit-image-link button:hover,
+.links .remove-image-link button:hover{
+    opacity: 0.6;
+    text-shadow: 0px 0px 9px rgba(0,0,0,0.4);
+}
+
+.add-edit-remove-container{
+    width: 70%;
+    display: flex;
+}
+
+
+#add-image h3,
+#edit-image h3,
+#remove-image h3{
+    text-align: center;
+}
+
+#add-image{
+    display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(0,0,0,0.3);
+    margin-top: 10px;
+    width: 33%;
+    height: 300px;
+}
+
+#edit-image{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 33%;
+    height: 300px;
+}
+
+#remove-image{
+    display: none;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 10px;
+    width: 33%;
+    height: 300px;
+}
+
+.send-btn{
+    padding: 10px;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+
+.send-btn:hover{
+    background-color: #1f1f1fa3;
+    color: white;
+}
+
+.galery{
+    margin-top: 30px;
+    display: grid;
+    grid-template-rows: repeat(100,1fr);
+    grid-template-columns: repeat(4, 1fr);
+    background-color: rgba(0, 0, 0, 0.839);
     width: 70%;
     height: 100vh;
     border-radius: 20px;
 }
 
+#image1-buttons{
+    margin-top: 20px;
+}
+
+#image1-eliminatebtn{
+    padding: 10px;
+    border: none;
+    background-color: red;
+    color: white;
+    border-radius: 10px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+#image1-detailsbtn{
+    padding: 10px;
+    border-radius: 10px;
+    font-weight: bold;
+    border: none;
+    cursor: pointer;
+}
+
+
+#image1 {
+    margin-top: 30px;
+    width: 17rem;
+    height: 350px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#image1 img{
+    width: 75%;
+    border-radius: 10px;
+}
+
+#image1 h3{
+    margin-top: 15px;
+    text-align: center;
+    color: rgba(255, 252, 252, 0.844);
+}
+
+.loader-container{
+    display: none;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Estilos para el contenedor del spinner */
+.loader {
+    border: 16px solid #f3f3f3; /* Color de fondo del spinner */
+    border-top: 16px solid red; /* Color del borde superior del spinner */
+    border-radius: 50%; /* Hace que el div sea redondo */
+    width: 50px; /* Ancho del spinner */
+    height: 50px; /* Altura del spinner */
+    animation: spin 2s ease-in-out infinite; /* Aplica la animación de giro */
+  }
+  
+  /* Animación de giro */
+  @keyframes spin {
+    0% { transform: rotate(0deg); }
+    100% { transform: rotate(360deg); }
+  }
+  
